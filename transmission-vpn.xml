@@ -86,11 +86,6 @@ As you can see the variables are prefixed with TRANSMISSION_, the variable is ca
         <ContainerPort>1198</ContainerPort>
         <Protocol>udp</Protocol>
       </Port>
-      <Port>
-        <HostPort>51413</HostPort>
-        <ContainerPort>51413</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
     </Publish>
   </Networking>
   <Data>
@@ -206,11 +201,6 @@ As you can see the variables are prefixed with TRANSMISSION_, the variable is ca
       <Name>TRANSMISSION_SPEED_LIMIT_UP_ENABLED</Name>
       <Mode/>
     </Variable>
-    <Variable>
-      <Value>[PORT:51413]</Value>
-      <Name>TRANSMISSION_PEER_PORT</Name>
-      <Mode/>
-    </Variable>
   </Environment>
   <Config Name="Host Port 1" Target="9091" Default="9091" Mode="tcp" Description="Container Port: 9091" Type="Port" Display="always" Required="true" Mask="false">9091</Config>
   <Config Name="Host Path 2" Target="/data" Default="path for downloads" Mode="rw" Description="Container Path: /data" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/pipoca/</Config>
@@ -235,9 +225,6 @@ As you can see the variables are prefixed with TRANSMISSION_, the variable is ca
   <Config Name="TRANSMISSION_SPEED_LIMIT_DOWN_ENABLED" Target="TRANSMISSION_SPEED_LIMIT_DOWN_ENABLED" Default="true" Mode="" Description="Download limit speed enabled" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
   <Config Name="TRANSMISSION_SPEED_LIMIT_UP" Target="TRANSMISSION_SPEED_LIMIT_UP" Default="1024" Mode="" Description="Upload limit speed" Type="Variable" Display="always" Required="false" Mask="false">1024</Config>
   <Config Name="TRANSMISSION_SPEED_LIMIT_UP_ENABLED" Target="TRANSMISSION_SPEED_LIMIT_UP_ENABLED" Default="true" Mode="" Description="Upload limit speed enabled" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
-  <Config Name="Host Port 3" Target="51413" Default="51413" Mode="tcp" Description="Container Port: 51413" Type="Port" Display="always" Required="true" Mask="false">51413</Config>
-
-
 
   <Config Name="AppData Config Path" Target="/config" Default="/mnt/cache/appdata/activ-transmissionvpn" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/cache/appdata/transmission/</Config>
 </Container>
